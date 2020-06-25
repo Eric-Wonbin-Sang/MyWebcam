@@ -1,4 +1,4 @@
-import Camera
+from Classes import Camera
 import pygame
 
 from General import Constants
@@ -12,7 +12,7 @@ def main():
     screen = pygame.display.set_mode((width, height), pygame.RESIZABLE)
     clock = pygame.time.Clock()
 
-    camera = Camera.Camera(name="Camera 1", ip_address="http://192.168.1.10:8080")
+    camera = Camera.Camera(name="Camera 1", ip_address=Constants.phone_camera_ip_address)
 
     face_counter = 0
     facial_recognition_toggle = False
